@@ -56,7 +56,7 @@
     owner=root
     group=root
     mode=0644
-  with_dict: ganglia_config_gmond
+  with_dict: "{{ ganglia_config_gmond }}"
   tags:
     - gmond
 
@@ -67,7 +67,7 @@
     owner=root
     group=root
     mode=0755
-  with_dict: ganglia_config_gmond
+  with_dict: "{{ ganglia_config_gmond }}"
   tags:
     - gmond    
 
@@ -76,7 +76,7 @@
     name=gmond-{{ item.key }}
     enabled=yes
     state=restarted
-  with_dict: ganglia_config_gmond
+  with_dict: "{{ ganglia_config_gmond }}"
   tags:
     - gmond
     
